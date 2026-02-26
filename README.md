@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Magnetism Unplugged
+
+An open-source, interactive course on magnetism for learners with no physics or math background.
+
+## What is this?
+
+Magnetism Unplugged is a free, browser-based course that builds intuition about magnetism through plain-language explanations and interactive visualizations. No equations required — just curiosity.
+
+## Course Modules
+
+1. **The Invisible Push and Pull** — What magnets are, how poles work
+2. **Fields: The Invisible Landscape** — What a "field" means, field lines
+3. **Why Iron but Not Aluminum?** — Magnetic domains, why some materials are magnetic
+4. **Earth as a Giant Magnet** — Compasses, magnetic north, navigation
+5. **Electricity & Magnetism: Secret Siblings** — Moving charges create fields
+6. **Electromagnets and Why They Matter** — Coils, solenoids, controlling magnetism
+7. **Induction: Magnetism Creates Electricity** — Faraday's law, generators
+8. **Magnetism in Your Daily Life** — Motors, speakers, MRI, maglev
+9. **The Bigger Picture** — EM waves and how magnetism and electricity unify
+10. **Frontiers** — Quantum spin, superconductors, or fusion (pick your adventure)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Setup
 
 ```bash
+git clone https://github.com/dremy/magnetism-unplugged.git
+cd magnetism-unplugged
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to start the course.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run test` | Run unit tests |
+| `npm run lint` | Run linter |
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Here's how you can help:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Content**: Improve explanations, fix errors, add analogies
+- **Visualizations**: Build or improve interactive simulations
+- **Accessibility**: Improve a11y for visualizations and navigation
+- **Translations**: Help make the course available in other languages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Please open an issue before starting work on a new module or visualization.
 
-## Deploy on Vercel
+### Content Guidelines
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Audience**: No physics or math background assumed
+- **Tone**: Conversational, curious, never condescending
+- **Accuracy**: All content must be scientifically accurate, even when simplified
+- **Analogies**: Use them deliberately and note where they break down
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- Next.js 15 (App Router) + React 19 + TypeScript
+- MDX for interactive lesson content
+- Tailwind CSS for styling
+- Framer Motion for 2D interactions
+- Canvas API for field visualizations
+- Vitest for unit testing
+
+## License
+
+- **Code**: [MIT License](LICENSE)
+- **Educational Content** (MDX text, diagrams): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
