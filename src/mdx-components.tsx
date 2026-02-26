@@ -4,12 +4,17 @@ import { CommonMisconception } from "@/components/ui/CommonMisconception";
 import { TryIt } from "@/components/ui/TryIt";
 import { QuizQuestion } from "@/components/ui/QuizQuestion";
 
+/** Shared component map used by both Next.js MDX integration and manual compilation. */
+export const mdxComponents: MDXComponents = {
+  Callout,
+  CommonMisconception,
+  TryIt,
+  QuizQuestion,
+};
+
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    Callout,
-    CommonMisconception,
-    TryIt,
-    QuizQuestion,
+    ...mdxComponents,
     ...components,
   };
 }

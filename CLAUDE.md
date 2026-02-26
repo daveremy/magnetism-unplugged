@@ -97,4 +97,21 @@ All content must be scientifically accurate even though simplified. When in doub
 
 ## Workflow
 
-Explore → Plan → Write tests → Implement → Update docs → Commit
+Always work in a feature branch. Never commit directly to `main`.
+
+1. **Pick an issue** — Choose from GitHub issues / roadmap (create one if needed, update ROADMAP.md)
+2. **Branch** — Create a branch named appropriately (e.g., `module-1-content`, `fix-quiz-progress`)
+3. **Plan** — Enter planning mode, design the approach
+4. **Review plan** — Get reviews from Gemini and Codex, loop until both say LGTM
+5. **Implement** — Write code, tests, content
+6. **Simplify** — Run `code-simplifier:code-simplifier`, loop until no substantial improvements
+7. **Review code** — Get reviews from Gemini and Codex, loop until both say LGTM
+8. **Update docs** — Update ROADMAP.md, CLAUDE.md, etc. as needed
+9. **Submit PR** — Push branch, create PR via `gh pr create`
+10. **Merge** — Merge upon approval
+
+### Review Commands
+
+- **Gemini**: `gemini -p "@<files> <review prompt>"`
+- **Codex**: `codex exec "<review prompt>"`
+- Both reviewers must say LGTM before proceeding

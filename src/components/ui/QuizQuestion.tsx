@@ -34,14 +34,7 @@ export function QuizQuestion({
 
       <div className="space-y-2" role="radiogroup" aria-label={question}>
         {options.map((option, i) => {
-          let optionStyle = "border-gray-200 hover:border-gray-300";
-          if (revealed && i === correctIndex) {
-            optionStyle = "border-green-500 bg-green-50";
-          } else if (revealed && i === selected && i !== correctIndex) {
-            optionStyle = "border-red-500 bg-red-50";
-          } else if (selected === i) {
-            optionStyle = "border-blue-500 bg-blue-50";
-          }
+          const optionStyle = getOptionStyle(i, selected, correctIndex, revealed);
 
           return (
             <button
@@ -87,4 +80,16 @@ export function QuizQuestion({
       )}
     </div>
   );
+}
+
+function getOptionStyle(
+  index: number,
+  selected: number | null,
+  correctIndex: number,
+  revealed: boolean,
+): string {
+  if (revealed && index === correctIndex) return "border-green-500 bg-green-50";
+  if (revealed && index === selected) return "border-red-500 bg-red-50";
+  if (index === selected) return "border-blue-500 bg-blue-50";
+  return "border-gray-200 hover:border-gray-300";
 }

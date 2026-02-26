@@ -1,8 +1,16 @@
 import type { ReactNode } from "react";
 
+type CalloutType = "info" | "warning" | "tip";
+
 interface CalloutProps {
-  type?: "info" | "warning" | "tip";
+  type?: CalloutType;
   children: ReactNode;
+}
+
+interface CalloutStyle {
+  container: string;
+  icon: string;
+  emoji: string;
 }
 
 const styles = {
@@ -21,7 +29,7 @@ const styles = {
     icon: "text-green-600",
     emoji: "✅",
   },
-};
+} as const satisfies Record<CalloutType, CalloutStyle>;
 
 export function Callout({ type = "info", children }: CalloutProps) {
   const style = styles[type];

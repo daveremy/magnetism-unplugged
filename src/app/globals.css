@@ -66,10 +66,6 @@ body {
   color: #111827;
 }
 
-.prose em {
-  font-style: italic;
-}
-
 .prose hr {
   margin: 2rem 0;
   border-color: #e5e7eb;

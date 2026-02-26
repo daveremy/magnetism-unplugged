@@ -1,5 +1,3 @@
-"use client";
-
 interface ArrowProps {
   x: number;
   y: number;
@@ -24,11 +22,9 @@ export function Arrow({
   const headSize = Math.min(length * 0.3, 8);
   const rad = (angle * Math.PI) / 180;
 
-  // Arrow shaft endpoint
   const endX = x + Math.cos(rad) * length;
   const endY = y + Math.sin(rad) * length;
 
-  // Arrowhead points
   const head1X = endX - Math.cos(rad - 0.4) * headSize;
   const head1Y = endY - Math.sin(rad - 0.4) * headSize;
   const head2X = endX - Math.cos(rad + 0.4) * headSize;
