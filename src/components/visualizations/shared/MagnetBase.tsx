@@ -1,5 +1,3 @@
-"use client";
-
 interface MagnetBaseProps {
   x: number;
   y: number;
@@ -8,6 +6,8 @@ interface MagnetBaseProps {
   rotation?: number;
   label?: { north?: string; south?: string };
 }
+
+const DEFAULT_LABEL = { north: "N", south: "S" } as const;
 
 /**
  * SVG bar magnet visual. North (red) on left, South (blue) on right.
@@ -19,14 +19,13 @@ export function MagnetBase({
   width = 100,
   height = 40,
   rotation = 0,
-  label = { north: "N", south: "S" },
+  label = DEFAULT_LABEL,
 }: MagnetBaseProps) {
   const halfW = width / 2;
   const halfH = height / 2;
 
   return (
     <g transform={`translate(${x}, ${y}) rotate(${rotation})`}>
-      {/* North pole (red) */}
       <rect
         x={-halfW}
         y={-halfH}
@@ -35,7 +34,6 @@ export function MagnetBase({
         rx={4}
         fill="#ef4444"
       />
-      {/* South pole (blue) */}
       <rect
         x={0}
         y={-halfH}
@@ -45,7 +43,6 @@ export function MagnetBase({
         fill="#3b82f6"
       />
 
-      {/* Labels */}
       {label.north && (
         <text
           x={-halfW / 2}

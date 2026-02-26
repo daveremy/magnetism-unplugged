@@ -9,13 +9,29 @@ function getDefaultProgress(): Progress {
   return { completedModules: [], quizScores: {} };
 }
 
+function isValidProgress(value: unknown): value is Progress {
+  if (typeof value !== "object" || value === null) return false;
+  const obj = value as Record<string, unknown>;
+  return (
+    Array.isArray(obj.completedModules) &&
+    obj.completedModules.every((item) => typeof item === "string") &&
+    typeof obj.quizScores === "object" &&
+    obj.quizScores !== null &&
+    !Array.isArray(obj.quizScores) &&
+    Object.values(obj.quizScores as Record<string, unknown>).every(
+      (v) => typeof v === "number",
+    )
+  );
+}
+
 export function loadProgress(): Progress {
   if (typeof window === "undefined") return getDefaultProgress();
 
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return getDefaultProgress();
-    return JSON.parse(raw) as Progress;
+    const parsed: unknown = JSON.parse(raw);
+    return isValidProgress(parsed) ? parsed : getDefaultProgress();
   } catch {
     return getDefaultProgress();
   }
@@ -23,7 +39,11 @@ export function loadProgress(): Progress {
 
 export function saveProgress(progress: Progress): void {
   if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  } catch {
+    // Fail silently — quota exceeded, private browsing, etc.
+  }
 }
 
 export function markModuleComplete(slug: string): void {

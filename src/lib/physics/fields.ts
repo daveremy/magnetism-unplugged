@@ -44,17 +44,18 @@ export function fieldFromPole(
   poleStrength: number,
   point: Vector2D,
 ): Vector2D {
-  const displacement = subtract(point, polePosition);
-  const dist = magnitude(displacement);
+  const dx = point.x - polePosition.x;
+  const dy = point.y - polePosition.y;
+  const distSq = dx * dx + dy * dy;
 
   // Avoid division by zero — return zero field very close to the pole
-  if (dist < 0.01) return { x: 0, y: 0 };
+  if (distSq < 0.0001) return { x: 0, y: 0 };
 
-  const direction = normalize(displacement);
-  // Field strength falls off with inverse-square of distance
-  const fieldStrength = poleStrength / (dist * dist);
+  const dist = Math.sqrt(distSq);
+  // Field strength falls off with inverse-square; direction is displacement/dist
+  const factor = poleStrength / (distSq * dist);
 
-  return scale(direction, fieldStrength);
+  return { x: dx * factor, y: dy * factor };
 }
 
 /**
