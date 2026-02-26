@@ -1,24 +1,46 @@
+import type { ReactElement } from "react";
+import { XMarkIcon, CheckIcon } from "./icons";
+
 interface CommonMisconceptionProps {
   myth: string;
   reality: string;
 }
 
-export function CommonMisconception({ myth, reality }: CommonMisconceptionProps) {
+export function CommonMisconception({
+  myth,
+  reality,
+}: CommonMisconceptionProps): ReactElement {
   return (
-    <div className="my-4 rounded-lg border border-red-200 bg-red-50 p-4" role="note">
-      <div className="space-y-2">
-        <div>
-          <span className="text-sm font-semibold text-red-800">
-            Common misconception:
+    <div
+      className="my-5 grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-lg overflow-hidden border border-rule"
+      role="note"
+    >
+      {/* Myth panel */}
+      <div className="bg-myth-soft p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-myth/15 text-myth">
+            <XMarkIcon size={12} />
           </span>
-          <p className="text-sm text-red-700 italic">&ldquo;{myth}&rdquo;</p>
-        </div>
-        <div>
-          <span className="text-sm font-semibold text-green-800">
-            What actually happens:
+          <span className="text-xs font-bold uppercase tracking-wider text-myth">
+            Myth
           </span>
-          <p className="text-sm text-green-700">{reality}</p>
         </div>
+        <p className="text-sm text-ink-muted italic leading-relaxed">
+          &ldquo;{myth}&rdquo;
+        </p>
+      </div>
+
+      {/* Reality panel */}
+      <div className="bg-success-soft p-4 border-t sm:border-t-0 sm:border-l border-rule">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-success/15 text-success">
+            <CheckIcon size={12} />
+          </span>
+          <span className="text-xs font-bold uppercase tracking-wider text-success">
+            Reality
+          </span>
+        </div>
+        <p className="text-sm text-ink-muted leading-relaxed">{reality}</p>
       </div>
     </div>
   );

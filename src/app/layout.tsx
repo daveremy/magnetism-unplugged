@@ -1,18 +1,26 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Source_Serif_4, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { Navigation } from "@/components/ui/Navigation";
 import { getAllModules } from "@/lib/modules";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,13 +33,13 @@ export default function RootLayout({
   children,
 }: {
   children: ReactNode;
-}) {
+}): ReactElement {
   const modules = getAllModules();
 
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sourceSerif.variable} ${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <div className="flex min-h-screen">
           <Navigation modules={modules} />
