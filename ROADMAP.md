@@ -8,11 +8,11 @@
 - [x] Progress tracking (localStorage)
 - [x] Module 1: The Invisible Push and Pull (content)
 - [x] Module 1: Magnet poles interaction visualization
-- [ ] Dogfooding pass on Module 1
+- [x] Dogfooding pass on Module 1
 
 ## Phase 2: Core Concepts (Modules 2-4)
 
-- [ ] Module 2: Fields — The Invisible Landscape
+- [x] Module 2: Fields — The Invisible Landscape (content)
 - [ ] Module 2: Field line drawer visualization
 - [ ] Module 3: Why Iron but Not Aluminum?
 - [ ] Module 3: Domain alignment simulation
