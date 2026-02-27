@@ -148,7 +148,7 @@ export function computeAllFieldLines(
   scene: Scene,
   config: TraceConfig = DEFAULT_TRACE_CONFIG,
 ): Vector2D[][] {
-  const seedsPerPole = scene.dipoles.length === 1 ? 10 : 8;
+  const seedsPerPole = scene.dipoles.length === 1 ? 18 : 14;
   const seedRadius = config.poleRadius + 2;
   const seeds = generateSeedPoints(scene, seedsPerPole, seedRadius);
 
