@@ -3,6 +3,7 @@ import { Callout } from "@/components/ui/Callout";
 import { CommonMisconception } from "@/components/ui/CommonMisconception";
 import { TryIt } from "@/components/ui/TryIt";
 import { QuizQuestion } from "@/components/ui/QuizQuestion";
+import { MagnetPoles } from "@/components/visualizations/MagnetPoles";
 
 /** Shared component map used by both Next.js MDX integration and manual compilation. */
 export const mdxComponents: MDXComponents = {
@@ -10,6 +11,7 @@ export const mdxComponents: MDXComponents = {
   CommonMisconception,
   TryIt,
   QuizQuestion,
+  MagnetPoles,
 };
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {

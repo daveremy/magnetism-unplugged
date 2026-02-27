@@ -7,7 +7,7 @@
 - [x] Shared components (Callout, TryIt, QuizQuestion, CommonMisconception)
 - [x] Progress tracking (localStorage)
 - [ ] Module 1: The Invisible Push and Pull (content)
-- [ ] Module 1: Magnet poles interaction visualization
+- [x] Module 1: Magnet poles interaction visualization
 - [ ] Dogfooding pass on Module 1
 
 ## Phase 2: Core Concepts (Modules 2-4)

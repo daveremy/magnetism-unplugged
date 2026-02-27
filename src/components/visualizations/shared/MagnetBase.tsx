@@ -5,9 +5,11 @@ interface MagnetBaseProps {
   height?: number;
   rotation?: number;
   label?: { north?: string; south?: string };
+  fill?: { north?: string; south?: string };
 }
 
 const DEFAULT_LABEL = { north: "N", south: "S" } as const;
+const DEFAULT_FILL = { north: "#ef4444", south: "#3b82f6" } as const;
 
 /**
  * SVG bar magnet visual. North (red) on left, South (blue) on right.
@@ -20,6 +22,7 @@ export function MagnetBase({
   height = 40,
   rotation = 0,
   label = DEFAULT_LABEL,
+  fill = DEFAULT_FILL,
 }: MagnetBaseProps) {
   const halfW = width / 2;
   const halfH = height / 2;
@@ -32,7 +35,7 @@ export function MagnetBase({
         width={halfW}
         height={height}
         rx={4}
-        fill="#ef4444"
+        fill={fill.north ?? DEFAULT_FILL.north}
       />
       <rect
         x={0}
@@ -40,7 +43,7 @@ export function MagnetBase({
         width={halfW}
         height={height}
         rx={4}
-        fill="#3b82f6"
+        fill={fill.south ?? DEFAULT_FILL.south}
       />
 
       {label.north && (

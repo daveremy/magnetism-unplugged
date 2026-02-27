@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
+import { LightbulbIcon, AlertTriangleIcon, CheckCircleIcon } from "./icons";
 
 type CalloutType = "info" | "warning" | "tip";
 
@@ -7,43 +8,42 @@ interface CalloutProps {
   children: ReactNode;
 }
 
-interface CalloutStyle {
-  container: string;
-  icon: string;
-  emoji: string;
-}
-
-const styles = {
+const config = {
   info: {
-    container: "border-blue-200 bg-blue-50",
-    icon: "text-blue-600",
-    emoji: "💡",
+    bg: "bg-south-soft",
+    border: "border-south",
+    iconColor: "text-south",
+    Icon: LightbulbIcon,
   },
   warning: {
-    container: "border-amber-200 bg-amber-50",
-    icon: "text-amber-600",
-    emoji: "⚠️",
+    bg: "bg-caution-soft",
+    border: "border-caution",
+    iconColor: "text-caution",
+    Icon: AlertTriangleIcon,
   },
   tip: {
-    container: "border-green-200 bg-green-50",
-    icon: "text-green-600",
-    emoji: "✅",
+    bg: "bg-success-soft",
+    border: "border-success",
+    iconColor: "text-success",
+    Icon: CheckCircleIcon,
   },
-} as const satisfies Record<CalloutType, CalloutStyle>;
+} as const;
 
-export function Callout({ type = "info", children }: CalloutProps) {
-  const style = styles[type];
+export function Callout({ type = "info", children }: CalloutProps): ReactElement {
+  const { bg, border, iconColor, Icon } = config[type];
 
   return (
     <div
-      className={`my-4 rounded-lg border-l-4 p-4 ${style.container}`}
+      className={`my-5 rounded-tr-lg rounded-br-lg border-l-4 p-4 ${bg} ${border}`}
       role="note"
     >
       <div className="flex gap-3">
-        <span className={`text-lg ${style.icon}`} aria-hidden="true">
-          {style.emoji}
+        <span className={`shrink-0 mt-0.5 ${iconColor}`}>
+          <Icon size={18} />
         </span>
-        <div className="text-sm leading-relaxed">{children}</div>
+        <div className="text-sm leading-relaxed text-ink-muted [&>p]:mb-2 [&>p:last-child]:mb-0">
+          {children}
+        </div>
       </div>
     </div>
   );
