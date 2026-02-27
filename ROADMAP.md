@@ -6,7 +6,7 @@
 - [x] Core app shell (navigation, layout, MDX rendering)
 - [x] Shared components (Callout, TryIt, QuizQuestion, CommonMisconception)
 - [x] Progress tracking (localStorage)
-- [ ] Module 1: The Invisible Push and Pull (content)
+- [x] Module 1: The Invisible Push and Pull (content)
 - [x] Module 1: Magnet poles interaction visualization
 - [ ] Dogfooding pass on Module 1
 
