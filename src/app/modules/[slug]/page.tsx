@@ -8,6 +8,8 @@ import {
   getAdjacentModules,
 } from "@/lib/modules";
 import { compileMDXContent } from "@/lib/mdx";
+import { extractHeadings, buildTocTree } from "@/lib/toc";
+import { TableOfContents } from "@/components/ui/TableOfContents";
 import { ChevronLeftIcon, ChevronRightIcon } from "@/components/ui/icons";
 
 interface ModulePageProps {
@@ -35,6 +37,7 @@ export default async function ModulePage({ params }: ModulePageProps): Promise<R
   if (!mod) notFound();
 
   const content = await compileMDXContent(mod.content);
+  const sections = buildTocTree(extractHeadings(mod.content));
   const { prev, next } = getAdjacentModules(slug);
 
   return (
@@ -52,6 +55,8 @@ export default async function ModulePage({ params }: ModulePageProps): Promise<R
         </h1>
         <p className="text-ink-muted mt-3 leading-relaxed">{mod.description}</p>
       </header>
+
+      <TableOfContents sections={sections} />
 
       {/* MDX content */}
       <div className="prose max-w-none">{content}</div>
