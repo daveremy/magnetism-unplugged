@@ -242,9 +242,9 @@ export function FieldLineDrawer() {
           arrowheads.map((arrow, i) => (
             <polygon
               key={`arrow-${i}`}
-              points="-3,-2 3,0 -3,2"
+              points="-5,-3.5 5,0 -5,3.5"
               fill="var(--ink-muted)"
-              opacity={0.5}
+              opacity={0.6}
               transform={`translate(${arrow.x},${arrow.y}) rotate(${arrow.angle})`}
             />
           ))}
