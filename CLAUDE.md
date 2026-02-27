@@ -77,6 +77,7 @@ status: "draft" | "review" | "published"
 - `<TryIt>` — Hands-on experiment prompts
 - `<QuizQuestion>` — Interactive quiz questions
 - `<MagnetPoles>` — Interactive magnet poles drag simulation (attract/repel)
+- `<FieldLineDrawer>` — Interactive field line visualization with presets, 2D drag, toggle
 
 ## Physics Accuracy
 

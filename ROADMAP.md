@@ -13,7 +13,7 @@
 ## Phase 2: Core Concepts (Modules 2-4)
 
 - [x] Module 2: Fields — The Invisible Landscape (content)
-- [ ] Module 2: Field line drawer visualization
+- [x] Module 2: Field line drawer visualization
 - [ ] Module 3: Why Iron but Not Aluminum?
 - [ ] Module 3: Domain alignment simulation
 - [ ] Module 4: Earth as a Giant Magnet
