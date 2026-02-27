@@ -76,6 +76,7 @@ status: "draft" | "review" | "published"
 - `<CommonMisconception myth="..." reality="...">` — Misconception callouts
 - `<TryIt>` — Hands-on experiment prompts
 - `<QuizQuestion>` — Interactive quiz questions
+- `<MagnetPoles>` — Interactive magnet poles drag simulation (attract/repel)
 
 ## Physics Accuracy
 
