@@ -13,13 +13,15 @@ function getMdxFilenames(): string[] {
 
 /** Validate that frontmatter data has the required ModuleMeta shape. */
 function parseModuleMeta(data: Record<string, unknown>, filename: string): ModuleMeta {
-  const { title, slug, module, description, prerequisites, status } = data;
+  const { title, slug, module, description, learningObjectives, prerequisites, status } = data;
 
   if (
     typeof title !== "string" ||
     typeof slug !== "string" ||
     typeof module !== "number" ||
     typeof description !== "string" ||
+    !Array.isArray(learningObjectives) ||
+    !learningObjectives.every((o) => typeof o === "string") ||
     !Array.isArray(prerequisites) ||
     !prerequisites.every((p) => typeof p === "string") ||
     !["draft", "review", "published"].includes(status as string)
@@ -34,6 +36,7 @@ function parseModuleMeta(data: Record<string, unknown>, filename: string): Modul
     slug,
     module,
     description,
+    learningObjectives: learningObjectives as string[],
     prerequisites: prerequisites as string[],
     status: status as ModuleMeta["status"],
   };

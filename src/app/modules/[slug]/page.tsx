@@ -56,6 +56,13 @@ export default async function ModulePage({ params }: ModulePageProps): Promise<R
         <p className="text-ink-muted mt-3 leading-relaxed">{mod.description}</p>
       </header>
 
+      {/* What You'll Learn infographic */}
+      <img
+        src={`/images/modules/${String(mod.module).padStart(2, "0")}/what-youll-learn.png`}
+        alt={`What you'll learn: ${mod.learningObjectives.join("; ")}`}
+        className="w-full max-w-lg mx-auto rounded-xl mb-8"
+      />
+
       <TableOfContents sections={sections} />
 
       {/* MDX content */}
