@@ -80,6 +80,16 @@ export function LandingContent({ modules }: LandingContentProps): ReactElement {
           </motion.p>
         </motion.header>
 
+        {/* Course overview infographic */}
+        <motion.img
+          src="/images/course-overview.png"
+          alt="Visual overview of the 10-module Magnetism Unplugged course journey"
+          className="w-full max-w-sm mx-auto rounded-xl mb-10"
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, duration: 0.4 }}
+        />
+
         {/* Course roadmap — the main visual */}
         <motion.section
           className="mb-14"

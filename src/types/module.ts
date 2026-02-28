@@ -3,6 +3,7 @@ export interface ModuleMeta {
   slug: string;
   module: number;
   description: string;
+  learningObjectives: string[];
   prerequisites: string[];
   status: "draft" | "review" | "published";
 }

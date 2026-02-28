@@ -65,6 +65,7 @@ title: "Module Title"
 slug: "module-slug"
 module: 1
 description: "Short description"
+learningObjectives: ["Objective 1", "Objective 2", "Objective 3"]
 prerequisites: []
 status: "draft" | "review" | "published"
 ---
