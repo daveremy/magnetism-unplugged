@@ -1,0 +1,261 @@
+---
+title: "Why Iron but Not Aluminum?"
+slug: "why-iron-but-not-aluminum"
+module: 3
+description: "How atomic magnets and magnetic domains explain why only certain materials respond"
+prerequisites: ["fields-the-invisible-landscape"]
+status: "draft"
+---
+
+<img src="/images/modules/03/hero-atomic-zoom.png" alt="Zoom sequence from an iron nail to its crystal lattice to individual atoms with magnetic arrows, showing how macroscopic iron is built from tiny atomic magnets" style={{width: '100%', maxWidth: '480px', margin: '0 auto 2rem', display: 'block', borderRadius: '1rem'}} />
+
+## Why does iron stick but aluminum doesn't?
+
+In Module 1, we discovered that certain materials respond to magnets while others ignore them completely. In Module 2, we learned that a <Term id="field">magnetic field</Term> fills the space around every magnet. We waved a magnet near an iron nail and it leaped. We tried an aluminum can and... nothing.
+
+Same field. Same distance. Wildly different responses.
+
+Time to zoom in past the surface, past the crystal lattice, all the way down to individual atoms — because the answer lives there.
+
+## What You'll Learn
+
+- Why every atom in iron behaves like a tiny magnet
+- What magnetic domains are and why they form
+- How an external field aligns domains to magnetize a material
+- What separates ferromagnetic materials from everything else
+
+## The Secret Inside Every Atom
+
+Everything around you — the iron nail, the aluminum can, the air between them — is made of **atoms**, unimaginably small building blocks. Each atom has a dense core (the **nucleus**) surrounded by even tinier particles called **electrons**. You can think of electrons as a cloud of activity buzzing around the nucleus, each one carrying a negative electric charge.
+
+What does any of this have to do with magnetism? It turns out that every electron is a tiny magnet — it has its own north and south pole, just like the bar magnets from Module 1, only unimaginably smaller. Physicists call the property behind this built-in magnetism **spin**. The name is misleading (nothing is physically rotating), but the effect is real: every electron produces a magnetic pull.
+
+<CommonMisconception
+  myth="Electrons spin like tiny tops — that's where magnetism comes from."
+  reality="Nothing is physically spinning. 'Spin' is just the physicist's name for the electron's built-in magnetism — a historical label from early quantum mechanics. What matters is the effect: each electron acts like a tiny magnet."
+/>
+
+In most atoms, electrons come in pairs, and paired electrons have opposite spins. Their tiny magnetic pulls point in opposite directions and cancel perfectly — like two equally matched people pulling a rope in opposite directions. The atom ends up with no net magnetism.
+
+But some atoms have **unpaired electrons** — electrons without a partner to cancel their spin. Each unpaired electron adds its magnetic pull to the atom's total. Physicists call this combined pull the atom's **magnetic moment** — you can think of it as a measure of how strong a tiny magnet the atom is.
+
+Here's where iron gets interesting. An iron atom has **four unpaired electrons** — four tiny magnets all adding up. That gives iron a strong magnetic moment per atom.
+
+Aluminum? It has just **one unpaired electron**. A weaker magnetic moment — but more importantly, as we'll see in the next section, aluminum's atoms don't cooperate with their neighbors the way iron's do. That cooperation turns out to be the real key.
+
+What about materials like plastic or wood? Their electrons are locked up in chemical bonds, with no unpaired electrons left over — so there's no magnetic moment per molecule.
+
+<CommonMisconception
+  myth="Iron is magnetic because it's a metal — all metals are magnetic."
+  reality="Most metals are not ferromagnetic. Copper, gold, silver, and aluminum all fail the fridge-magnet test. Only iron, cobalt, nickel, and certain alloys show strong magnetic behavior. Being a metal is neither necessary nor sufficient for being magnetic."
+/>
+
+<img src="/images/modules/03/atomic-magnets-iron-vs-aluminum.png" alt="Comparison of iron and aluminum atoms: iron has four unpaired electrons creating a strong magnetic moment, while aluminum has only one unpaired electron and a much weaker magnetic moment" style={{width: '100%', maxWidth: '520px', margin: '1.5rem auto', display: 'block', borderRadius: '0.75rem'}} />
+
+**The choir analogy:** Imagine paired electrons as a duet singing perfectly opposite notes — their sound cancels to silence. Unpaired electrons are solo voices that ring out clearly. Iron has a four-voice chorus; aluminum has a lone singer. *Where this breaks down:* sound cancellation is wave interference, but electron spin cancellation is paired opposite moments summing to zero — a fundamentally different mechanism.
+
+## When Neighbors Agree — The Iron Advantage
+
+Having unpaired electrons is necessary, but it's not enough. Manganese has *five* unpaired electrons — more than iron — yet a chunk of manganese sitting on your desk is not magnetic. Chromium has unpaired electrons too. Still not magnetic. What gives?
+
+The missing ingredient is **cooperation between neighboring atoms**.
+
+In iron, cobalt, and nickel, something remarkable happens: atoms are spaced just right so that each atom's magnetic moment influences its neighbors, encouraging them to align in the same direction. This is a quantum mechanical effect — physicists call it "exchange interaction" — and it only works when the atoms are the right distance apart with the right electronic structure.
+
+Think of it this way: imagine everyone in a crowd is holding a compass needle. In "iron world," people are standing close enough that each needle tugs on its neighbors, and the needles snap into alignment — one person's needle pulls the next, which pulls the next. But this chain reaction only works because the needles (unpaired electrons) are strong enough AND because the specific spacing allows the quantum exchange effect to operate.
+
+In "aluminum world," each person holds a weaker needle, and the spacing is wrong — no chain reaction occurs. Each compass points whatever direction it pleases. Manganese is similar: strong needles, but the atomic spacing means the quantum exchange effect actually makes neighbors prefer to *anti*-align, cancelling each other out instead of reinforcing.
+
+<img src="/images/modules/03/neighbor-cooperation.png" alt="Side-by-side comparison: in iron, closely spaced people hold compass needles that all snap into alignment through neighbor influence; in aluminum, people stand farther apart with weaker needles pointing in random directions — no cooperation occurs" style={{width: '100%', maxWidth: '520px', margin: '1.5rem auto', display: 'block', borderRadius: '0.75rem'}} />
+
+*Where this analogy breaks down:* the real mechanism is quantum exchange interaction — the overlap of electron wavefunctions between neighboring atoms — not classical magnetic coupling between compass needles. The analogy captures the *effect* (cooperative alignment) but not the *cause* (electronic structure combined with crystal geometry).
+
+<Callout type="tip">
+Remember <Alloy id="stainless-steel">stainless steel</Alloy> from Module 1? It's mostly iron, but adding chromium and nickel can change the **crystal structure** — the repeating pattern in which atoms are arranged — from one where neighbors cooperate to one where they don't — same iron atoms, different arrangement, completely different magnetic behavior. Crystal structure matters.
+</Callout>
+
+So the full chain looks like this: **crystal structure** determines how atoms are spaced → that spacing determines whether the **exchange interaction** kicks in → and when it does, the cooperative alignment it produces organizes atoms into **magnetic domains**.
+
+<img src="/images/modules/03/crystal-to-domains.png" alt="Three-step causal chain: crystal structure (atoms in a regular grid) leads to exchange interaction (neighboring atoms aligning cooperatively) which leads to magnetic domains (mosaic of regions with different alignment directions)" style={{width: '100%', maxWidth: '520px', margin: '1.5rem auto', display: 'block', borderRadius: '0.75rem'}} />
+
+## Magnetic Domains
+
+If neighboring atoms in iron all encourage each other to align, you might expect every iron nail to already be a powerful magnet. But most nails stick to your fridge without being magnets themselves. Why?
+
+The answer is **domains**.
+
+Inside any piece of iron, atoms do align with their neighbors — but only within regions called **magnetic domains**. A single domain might contain billions of atoms, all with their magnetic moments pointing the same direction.
+
+But here's the catch: different domains point in *different* directions. One domain points north, its neighbor points east, another points south. Across the whole piece of iron, the domains' fields cancel each other out, and the nail shows no net magnetism.
+
+<img src="/images/modules/03/domains-unmagnetized.png" alt="Cross-section of an iron bar showing a mosaic of magnetic domains pointing in random directions, with arrows indicating each domain's alignment — their fields cancel to produce zero net magnetism" style={{width: '100%', maxWidth: '480px', margin: '1.5rem auto', display: 'block', borderRadius: '0.75rem'}} />
+
+Why don't all the domains just merge into one giant aligned region? Because full alignment creates a strong external field, and maintaining that field costs energy. Domains are nature's compromise — local alignment (low energy between neighbors) without the costly external field (domains cancel globally).
+
+**The stadium analogy:** Think of a sports stadium where each section starts its own "wave" — within each section, everyone is perfectly coordinated, but the sections aren't synchronized with each other. From a helicopter overhead, the stadium looks chaotic even though each section is internally organized. *Where this breaks down:* domain boundaries (called domain walls) are real physical structures with measurable width, and domains form through energy minimization, not social dynamics.
+
+## Applying a Field — Waking the Domains
+
+Now bring a magnet close to that unmagnetized iron nail. Remember from Module 2 that the magnet's field fills the space around it — that invisible landscape of influence now reaches into the nail's domain structure and does two things:
+
+**First**, domains that already happen to point in the same direction as the external field **grow**. Their boundaries shift outward, swallowing up neighboring domains that point in less favorable directions — like a political map redrawn in favor of the winning side. *Where this breaks down:* domain walls move through energy minimization at the atomic scale, not by any voting or decision process; the analogy captures the territorial shift but not the physics driving it.
+
+**Second**, within domains that aren't aligned, individual atomic magnets **rotate** toward the field direction.
+
+The combined effect: more and more of the nail's atomic magnets end up pointing the same way, and the nail becomes a temporary magnet.
+
+<img src="/images/modules/03/domains-aligning.png" alt="Three panels showing domain alignment: no external field with random domains, field applied with aligned domains growing, and fully magnetized with nearly all domains pointing in the field direction" style={{width: '100%', maxWidth: '520px', margin: '1.5rem auto', display: 'block', borderRadius: '0.75rem'}} />
+
+Remove the external field, and in a **soft magnetic material** (like the soft iron in a nail), most domains scramble back toward their original random arrangement. The nail loses most of its magnetism.
+
+But in some materials, the domains resist moving back. The atomic magnets get locked into their new alignment. Physicists call these **hard magnetic materials** — "hard" because the domain alignment is hard to undo — and the result is a **permanent magnet**. The iron nail, by contrast, is a **soft magnetic material** — its domains easily shuffle back to random when the field is removed. (We'll explore what makes some materials hard and others soft in a later module.)
+
+<CommonMisconception
+  myth="Iron is either magnetic or it's not — there's no in-between."
+  reality="Magnetism in iron is a spectrum. An unmagnetized nail has randomly oriented domains (no net magnetism), a partially magnetized nail has some alignment, and a fully magnetized nail has maximum alignment. It's a continuum, not an on/off switch."
+/>
+
+{/* TODO: DomainAlignment visualization (issue #6) */}
+
+## The Ferromagnetic Family
+
+At room temperature, only three elements are strongly magnetic: **iron (Fe)**, **cobalt (Co)**, and **nickel (Ni)**. Physicists call them **ferromagnetic** — literally "magnetic like iron," from the Latin *ferrum* (the same root that gives iron its chemical symbol, Fe).
+
+But ferromagnetism isn't limited to pure elements. <Term id="alloy">Alloys</Term> — mixtures of metals — can be ferromagnetic too. <Alloy id="steel">Steel</Alloy> (iron + carbon) is ferromagnetic. Alnico (aluminum + nickel + cobalt) makes powerful permanent magnets. And neodymium magnets (NdFeB) — the super-strong silver magnets you might have on your fridge — are an alloy of neodymium, iron, and boron. The individual ingredients don't all need to be ferromagnetic; it's the crystal structure of the alloy that determines whether neighbor cooperation occurs.
+
+<Callout type="tip">
+Gadolinium (Gd) is technically ferromagnetic — but only below about 20°C (68°F). On a warm day, it loses its ferromagnetism entirely. This shows just how precise the conditions have to be: the right unpaired electrons, the right crystal spacing, AND the right temperature.
+</Callout>
+
+<img src="/images/modules/03/ferromagnetic-elements.png" alt="Periodic table segment highlighting iron, cobalt, and nickel as the three elements that are ferromagnetic at room temperature, with gadolinium noted as ferromagnetic only below 20 degrees Celsius" style={{width: '100%', maxWidth: '520px', margin: '1.5rem auto', display: 'block', borderRadius: '0.75rem'}} />
+
+## Try It Yourself
+
+<TryIt>
+
+**Activity 1: Magnetize a nail**
+
+**What you'll need:** A magnet (any type), an iron nail, and a small paper clip.
+
+1. Test the nail against the paper clip first — it probably won't attract it.
+2. Stroke the magnet along the nail in **one direction only**, 20–30 times. Lift the magnet away between each stroke; don't scrub back and forth.
+3. Test the nail against the paper clip again. It should now pick it up!
+4. To demagnetize: tap the nail sharply on a hard surface several times, or drop it repeatedly onto a hard floor. Mechanical shock randomizes the domains.
+5. Test one more time — the nail should have lost most or all of its magnetism.
+
+**What to notice:** Stroking in one direction aligns the domains. Each stroke grows the favorably-oriented domains a bit more. Tapping introduces vibrations that let the domains relax back to their random, low-energy arrangement.
+
+**Safety note:** Do NOT attempt to demagnetize by heating — iron's Curie temperature is 770°C (1,418°F), dangerously high and requiring laboratory equipment. Stick to mechanical shock.
+
+**Activity 2: Material test**
+
+**What you'll need:** A magnet, plus a collection of objects — iron nail, aluminum can, copper coin, stainless steel spoon, and a plastic pen.
+
+1. Test the magnet against each object and sort them into two groups: "responds" and "doesn't respond."
+2. Try different stainless steel items — some may surprise you! (Remember Module 1?)
+3. If you have both a regular steel tool and a stainless steel utensil, compare their responses.
+
+**What to notice:** Iron-based objects respond strongly. Aluminum, copper, and plastic don't respond at all. Some stainless steel items respond weakly or not at all — it depends on whether the specific alloy has a ferromagnetic crystal structure.
+
+**Safety note:** If using neodymium (rare-earth) magnets, be careful — they can pinch fingers hard when they snap together. Keep magnets away from electronics and credit cards.
+</TryIt>
+
+## Check Your Understanding
+
+<QuizQuestion
+  question="Why is each iron atom like a tiny magnet?"
+  options={[
+    "Iron atoms are heavier than most atoms",
+    "Iron has unpaired electrons whose spins create a net magnetic moment",
+    "Iron atoms contain more protons than other metals",
+    "The iron crystal structure is naturally magnetic"
+  ]}
+  correctIndex={1}
+  explanation="Each iron atom has four unpaired electrons. Each one acts like a tiny magnet, and because they don't cancel, the atom has a strong magnetic moment."
+/>
+
+<QuizQuestion
+  question="What is a magnetic domain?"
+  options={[
+    "The area around a magnet where you can feel its pull",
+    "A region inside a material where billions of atomic magnets all point the same direction",
+    "The north or south pole of a magnet",
+    "A type of permanent magnet"
+  ]}
+  correctIndex={1}
+  explanation="A domain is a microscopic region — typically containing billions of atoms — where all the atomic magnets are aligned in the same direction, creating a strong local field."
+/>
+
+<QuizQuestion
+  question="Why doesn't an unmagnetized iron nail act like a magnet?"
+  options={[
+    "Its atoms aren't magnetic",
+    "It doesn't contain enough iron",
+    "Its domains point in random directions, so their fields cancel out",
+    "It needs to be heated first"
+  ]}
+  correctIndex={2}
+  explanation="An unmagnetized nail has domains pointing in all different directions. Their magnetic fields cancel each other out, so the nail as a whole shows no net magnetism — even though each domain is strongly magnetic internally."
+/>
+
+<QuizQuestion
+  question="What happens inside iron when you hold a magnet near it?"
+  options={[
+    "New magnetic atoms are created",
+    "The iron gets hotter",
+    "Domains aligned with the external field grow at the expense of misaligned ones",
+    "The iron's electrons stop moving"
+  ]}
+  correctIndex={2}
+  explanation="The external field causes favorably aligned domains to expand (their walls shift) and atomic magnets in other domains to rotate toward the field direction. This is how iron becomes temporarily magnetized."
+/>
+
+<QuizQuestion
+  question="Why isn't aluminum strongly attracted to a magnet?"
+  options={[
+    "Aluminum's electrons are too free-moving to lock into alignment",
+    "Aluminum is too light to be magnetic",
+    "Aluminum's atoms lack the cooperative neighbor alignment needed to form domains",
+    "Aluminum is not a metal"
+  ]}
+  correctIndex={2}
+  explanation="While aluminum atoms do have one unpaired electron (making them very weakly paramagnetic), aluminum's electronic structure doesn't produce the stable cooperative alignment that iron achieves. Without that cooperation, no domains form, and there's no strong magnetic response."
+/>
+
+## Going Deeper: What About Everything Else?
+
+So far we've focused on ferromagnetic materials — the ones that respond strongly to magnets. But every material in the universe has *some* magnetic behavior. Physicists sort materials into three categories.
+
+### Paramagnetic Materials
+
+Materials with unpaired electrons but *no* neighbor cooperation are **paramagnetic**. Their atoms are individually magnetic, but without the chain-reaction alignment we saw in iron, the atomic magnets point in random directions. Apply an external field, and they weakly align — but only while the field is present, and the effect is thousands of times weaker than ferromagnetism.
+
+Aluminum is paramagnetic. Its one unpaired electron gives each atom a moment, but without cooperative alignment the bulk effect is invisible without sensitive laboratory instruments. Platinum and liquid oxygen are also paramagnetic — liquid oxygen is paramagnetic enough to be visibly attracted to a strong magnet, which makes for a dramatic laboratory demonstration.
+
+### Diamagnetic Materials
+
+Here's something surprising: *all* materials are slightly diamagnetic. When a magnetic field is applied, the electron orbits in every atom adjust slightly to oppose the field. In materials with unpaired electrons, this tiny repulsive effect is overwhelmed by paramagnetic or ferromagnetic behavior. But in materials with no unpaired electrons — water, copper, bismuth, most organic materials — diamagnetism is all that's left. The effect is incredibly weak, but it's there. Bismuth is diamagnetic enough that you can levitate a small magnet between two bismuth plates.
+
+### The Curie Temperature
+
+Ferromagnetism isn't permanent. Heat a ferromagnetic material above its **Curie temperature**, and the thermal energy overcomes the neighbor cooperation that holds domains together. The material becomes paramagnetic — individual atomic magnets still exist, but they jostle randomly instead of aligning.
+
+Iron's Curie temperature is 770°C (1,418°F). Nickel's is 358°C (676°F). And gadolinium's is roughly 20°C (68°F) — which is why it only counts as ferromagnetic on a cold day. This dramatic variation shows how delicate the balance between thermal chaos and magnetic order really is.
+
+Industrial processes use controlled heating above the Curie temperature to demagnetize parts — not safe at home, since iron's Curie temperature is far above anything a kitchen oven can reach.
+
+<Callout type="tip">
+Materials aren't simply "magnetic or not." Every material is ferro-, para-, or diamagnetic — it's a spectrum of responses, not a binary switch. The fridge-magnet test only detects ferromagnetism; the other two require sensitive instruments.
+</Callout>
+
+## Summary
+
+- Every electron has **spin**, an intrinsic quantum property that makes it act like a tiny magnet. Unpaired electrons give an atom a net magnetic moment.
+- Iron has **four unpaired electrons** plus the right atomic spacing for neighbors to cooperate — this combination produces strong, stable alignment.
+- Inside iron, aligned atoms form **magnetic domains** — regions of billions of atoms pointing the same way — but domains point in random directions, so an unmagnetized piece of iron shows no net field.
+- An external field makes aligned **domains grow** and misaligned atomic magnets **rotate**, temporarily magnetizing the material. Remove the field, and soft materials lose their magnetism; hard materials keep it.
+- Only **iron, cobalt, and nickel** are ferromagnetic at room temperature. All other materials are paramagnetic (weakly attracted) or diamagnetic (weakly repelled) — effects too faint to notice without instruments.
+
+## What's Next
+
+We've zoomed all the way down to atoms and domains to understand why iron responds to magnets. Now it's time to zoom all the way out. In the next module, we'll discover that we're all living on a giant magnet — the Earth itself has a magnetic field, and it has been guiding compass needles (and migrating birds) for centuries. How does a ball of rock and metal create a field that stretches from pole to pole?

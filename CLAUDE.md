@@ -76,6 +76,9 @@ status: "draft" | "review" | "published"
 - `<CommonMisconception myth="..." reality="...">` — Misconception callouts
 - `<TryIt>` — Hands-on experiment prompts
 - `<QuizQuestion>` — Interactive quiz questions
+- `<Term id="...">` — Glossary tooltip (red dotted underline)
+- `<Element id="...">` — Periodic table element tooltip (blue dashed underline). Data in `src/lib/elements.ts`
+- `<Alloy id="...">` — Alloy composition tooltip (purple solid underline). Data in `src/lib/alloys.ts`
 - `<MagnetPoles>` — Interactive magnet poles drag simulation (attract/repel)
 - `<FieldLineDrawer>` — Interactive field line visualization with presets, 2D drag, toggle
 

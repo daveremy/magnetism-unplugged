@@ -14,7 +14,7 @@
 
 - [x] Module 2: Fields — The Invisible Landscape (content)
 - [x] Module 2: Field line drawer visualization
-- [ ] Module 3: Why Iron but Not Aluminum?
+- [x] Module 3: Why Iron but Not Aluminum?
 - [ ] Module 3: Domain alignment simulation
 - [ ] Module 4: Earth as a Giant Magnet
 - [ ] Module 4: Interactive compass / Earth field visualization
