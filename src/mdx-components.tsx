@@ -8,6 +8,8 @@ import { QuizQuestion } from "@/components/ui/QuizQuestion";
 import { FieldLineDrawer } from "@/components/visualizations/FieldLineDrawer";
 import { MagnetPoles } from "@/components/visualizations/MagnetPoles";
 import { Term } from "@/components/ui/Term";
+import { Element } from "@/components/ui/Element";
+import { Alloy } from "@/components/ui/Alloy";
 import { slugify } from "@/lib/toc";
 
 /** Recursively extract plain text from React children (handles inline formatting). */
@@ -40,6 +42,8 @@ export const mdxComponents: MDXComponents = {
   FieldLineDrawer,
   MagnetPoles,
   Term,
+  Element,
+  Alloy,
   h2: headingWithId("h2"),
   h3: headingWithId("h3"),
 };

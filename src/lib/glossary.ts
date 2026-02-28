@@ -39,4 +39,6 @@ export const glossary: Record<string, string> = {
     "A material that is very slightly repelled by magnets. All materials are diamagnetic, but the effect is usually overwhelmed by stronger magnetic behaviors.",
   "Curie temperature":
     "The temperature above which a ferromagnetic material loses its neighbor cooperation and becomes paramagnetic.",
+  "crystal structure":
+    "The repeating three-dimensional pattern in which atoms are arranged inside a solid. Different arrangements change how atoms interact magnetically — the same element can be magnetic or non-magnetic depending on its crystal structure.",
 };
